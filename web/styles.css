@@ -1,0 +1,248 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #090d14;
+  color: #f4f7fb;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(50, 115, 220, .18), transparent 34rem),
+    #090d14;
+}
+
+button, input { font: inherit; }
+
+.shell {
+  width: min(1080px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 72px 0 36px;
+}
+
+.hero {
+  max-width: 760px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #8aa2c8;
+  font-size: .74rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(3.2rem, 10vw, 6.5rem);
+  letter-spacing: -.07em;
+  line-height: .92;
+}
+
+.subtitle {
+  max-width: 650px;
+  margin: 24px 0 32px;
+  color: #aeb9c9;
+  font-size: 1.12rem;
+  line-height: 1.7;
+}
+
+.search-card,
+.language-card,
+.stats-grid article {
+  border: 1px solid #202a3a;
+  background: rgba(15, 21, 31, .82);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, .22);
+}
+
+.search-card {
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.search-card label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+.search-row {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  width: 100%;
+  min-width: 0;
+  padding: 14px 16px;
+  border: 1px solid #2c394d;
+  border-radius: 12px;
+  outline: none;
+  background: #0b111b;
+  color: #fff;
+}
+
+input:focus {
+  border-color: #5c8ce8;
+  box-shadow: 0 0 0 3px rgba(92, 140, 232, .15);
+}
+
+button, .repo-link {
+  border: 0;
+  border-radius: 12px;
+  background: #e8eefb;
+  color: #0d1420;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+button {
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+button:hover, .repo-link:hover { filter: brightness(.92); }
+
+.hint {
+  margin: 10px 0 0;
+  color: #6f7e92;
+  font-size: .82rem;
+}
+
+.status {
+  min-height: 24px;
+  margin: 22px 0;
+  color: #94a7c4;
+}
+
+.status.error { color: #ff9a9a; }
+
+.hidden { display: none; }
+
+.repo-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+  margin: 16px 0 22px;
+}
+
+h2 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  letter-spacing: -.045em;
+}
+
+.description {
+  max-width: 700px;
+  margin: 12px 0 0;
+  color: #9eacbf;
+  line-height: 1.6;
+}
+
+.repo-link {
+  flex: 0 0 auto;
+  padding: 11px 14px;
+  font-size: .88rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.stats-grid article {
+  min-height: 128px;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.stats-grid span {
+  display: block;
+  color: #8290a4;
+  font-size: .82rem;
+}
+
+.stats-grid strong {
+  display: block;
+  margin-top: 18px;
+  font-size: clamp(1.1rem, 3vw, 1.65rem);
+  overflow-wrap: anywhere;
+}
+
+.language-card {
+  margin-top: 12px;
+  padding: 22px;
+  border-radius: 18px;
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 16px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.55rem;
+}
+
+.section-title > span {
+  color: #8290a4;
+  font-size: .85rem;
+}
+
+.languages {
+  display: grid;
+  gap: 17px;
+  margin-top: 24px;
+}
+
+.language-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+  font-size: .9rem;
+}
+
+.language-meta span { color: #8190a5; }
+
+.bar {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: #1e2735;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #4d81df, #9abcf8);
+}
+
+footer {
+  width: min(1080px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 42px;
+  color: #607086;
+  font-size: .83rem;
+}
+
+@media (max-width: 720px) {
+  .shell { padding-top: 48px; }
+  .search-row, .repo-heading { flex-direction: column; }
+  button { min-height: 48px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 440px) {
+  .stats-grid { grid-template-columns: 1fr; }
+}
