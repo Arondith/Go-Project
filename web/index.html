@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="RepoRadar analyzes public GitHub repositories using a Go backend.">
+  <title>RepoRadar — GitHub Repository Analyzer</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">GO + GITHUB REST API</p>
+      <h1>RepoRadar</h1>
+      <p class="subtitle">Inspect a public GitHub repository and get a clean engineering snapshot in seconds.</p>
+
+      <form id="analyze-form" class="search-card">
+        <label for="repository">GitHub repository</label>
+        <div class="search-row">
+          <input id="repository" name="repository" value="Arondith/KoroAR" placeholder="owner/repository" autocomplete="off" required>
+          <button type="submit">Analyze</button>
+        </div>
+        <p class="hint">Example: microsoft/vscode</p>
+      </form>
+    </section>
+
+    <p id="status" class="status" aria-live="polite"></p>
+
+    <section id="results" class="results hidden" aria-live="polite">
+      <div class="repo-heading">
+        <div>
+          <p class="eyebrow">REPOSITORY</p>
+          <h2 id="repo-name"></h2>
+          <p id="description" class="description"></p>
+        </div>
+        <a id="repo-link" class="repo-link" target="_blank" rel="noreferrer">View on GitHub ↗</a>
+      </div>
+
+      <div class="stats-grid">
+        <article><span>Stars</span><strong id="stars">0</strong></article>
+        <article><span>Forks</span><strong id="forks">0</strong></article>
+        <article><span>Open issues</span><strong id="issues">0</strong></article>
+        <article><span>Default branch</span><strong id="branch">—</strong></article>
+        <article><span>License</span><strong id="license">—</strong></article>
+        <article><span>Last updated</span><strong id="updated">—</strong></article>
+      </div>
+
+      <section class="language-card">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">CODE COMPOSITION</p>
+            <h3>Languages</h3>
+          </div>
+          <span id="language-count"></span>
+        </div>
+        <div id="languages" class="languages"></div>
+      </section>
+    </section>
+  </main>
+
+  <footer>Built as a portfolio project with Go, HTTP APIs, testing, Docker, and CI.</footer>
+  <script src="/app.js" defer></script>
+</body>
+</html>
