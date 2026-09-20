@@ -32,8 +32,8 @@ This repository was created to add **Go** to the portfolio while reinforcing exi
 Requirements: Go 1.23+
 
 ```bash
-git clone https://github.com/Arondith/Portfolio-project.git
-cd Portfolio-project
+git clone https://github.com/Arondith/Go-Project.git
+cd Go-Project
 go run ./cmd/server
 ```
 
